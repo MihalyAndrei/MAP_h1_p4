@@ -19,7 +19,7 @@ public class Main {
         for(int keyboard:keyboards){
             System.out.print(keyboard+" ");
         }
-        System.out.print(" ,the prices of the usbs are: ");
+        System.out.print(" ,the prices of the USB's are: ");
         for(int usb:usbs){
             System.out.print(usb+" ");
         }
@@ -27,18 +27,23 @@ public class Main {
 
         //3
         System.out.print("\nThe prices of the USB's are: ");
-        for(int keyboard:keyboards){
-            System.out.print(keyboard+" ");
+        for(int usb:usbs){
+            System.out.print(usb+" ");
         }
         System.out.print(", and his buget is "+buget);
         if(eShop.affordableItem(usbs,buget)!=0){
-            System.out.print("\n"+"He can afford: "+eShop.affordableItem(usbs,buget));
+            System.out.println("\n"+"He can afford: "+eShop.affordableItem(usbs,buget));
         }
         else{
-            System.out.print("\nHe can't afford anything");
+            System.out.println("\nHe can't afford anything");
         }
 
         //4
-
+        if(eShop.findMaxSpent(buget,keyboards,usbs)!=-1){
+            System.out.print("\nMarkus can afford both keyboards and USB's and can spend "+eShop.findMaxSpent(60,keyboards,usbs));
+        }
+        else{
+            System.out.print("\nMarkus cannot afford both keyboard and USB's");
+        }
     }
 }

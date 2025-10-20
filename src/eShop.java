@@ -42,4 +42,17 @@ public class eShop {
         perfectItem=max;
         return perfectItem;
     }
+
+    public static int findMaxSpent(int buget, int[] keyboards, int[] usbs) {
+        int maxSpent=-1;
+        for (int keyboard : keyboards) {
+            for (int usb : usbs) {
+                int total=keyboard+usb;
+                if (total<=buget && total>maxSpent) {
+                    maxSpent=total;
+                }
+            }
+        }
+        return maxSpent;
+    }
 }
