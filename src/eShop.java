@@ -27,4 +27,19 @@ public class eShop {
         }
         return max2;
     }
+
+    public static int affordableItem(int[] items, int buget){
+        int perfectItem=0;
+        int max=0;
+        for (int item:items){
+            if(item<buget){
+                perfectItem=item;
+            }
+            if (perfectItem>max){
+                max=perfectItem;
+            }
+        }
+        perfectItem=max;
+        return perfectItem;
+    }
 }
